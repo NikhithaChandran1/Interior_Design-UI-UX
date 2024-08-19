@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interior Design Quiz</title>
+    <link rel="stylesheet" href="Quiz.css" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-W0BT0S586R"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-W0BT0S586R");
+    </script>
+  </head>
+
+  <body>
+    
+    <div class="wrapper-main">
+      <div id="home" class="flex-center flex-column">
+        
+
+          
+
+          <div class="overlay-content">
+            <div class="begin-quiz-container">
+              <button id="begin-quiz">Begin Quiz</button>
+
+            
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Quiz-Page-->
+      <div class="quiz-page" id="quiz-page" style="display: none">
+        <div id="quiz" class="justify-center flex-column">
+          <img id="question-image" src="" />
+          <h2 id="question">question</h2>
+          <div id="choices" class="choices"></div>
+        </div>
+        <div id="processing-page" style="display: none;">
+          <img src="images/processing.gif" alt="Processing...">
+        </div>
+        <!-- Result Page -->
+        <div>
+          <div id="results" style="display: none">
+            <div id="mbti-image"></div>
+            <div class="button-container">
+              <button id="get-more-info">Get more info</button>
+              <button id="back-to-home">Back to Home</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Form Page -->
+      <div
+        id="form-page"
+        style="
+          height: 100%;
+          width: 100%;
+          display: none;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <form id="contact-form" class="form-container">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+          <label for="number">Phone Number</label>
+          <input type="tel" id="number" name="number" required />
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <script src="Quiz.js"></script>
+  </body>
+</html>
